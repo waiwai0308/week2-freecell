@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <div class="top">
+        <div class="top-content">
+            <div class="title">FREE<span>CELL</span></div>
+            <div class="menu">
+                <div class="undo">Undo</div>
+                <div class="restart">Restart</div>
+            </div>
+        </div>
+    </div>
+    <div class="header-poker">
+        <div class="putting-poker-group">
+            <div class="putting-card" ondrop="dropPutting(event)" ondragover="allowDrop(event)" id="putting-1"></div>
+            <div class="putting-card" ondrop="dropPutting(event)" ondragover="allowDrop(event)" id="putting-2"></div>
+            <div class="putting-card" ondrop="dropPutting(event)" ondragover="allowDrop(event)" id="putting-3"></div>
+            <div class="putting-card" ondrop="dropPutting(event)" ondragover="allowDrop(event)" id="putting-4"></div>
+        </div>
+        <div class="putting-poker-group">
+            <div class="putting-card" ondrop="dropCollect(event)" ondragover="allowDrop(event)" id="all-1"></div>
+            <div class="putting-card" ondrop="dropCollect(event)" ondragover="allowDrop(event)" id="all-2"></div>
+            <div class="putting-card" ondrop="dropCollect(event)" ondragover="allowDrop(event)" id="all-3"></div>
+            <div class="putting-card" ondrop="dropCollect(event)" ondragover="allowDrop(event)" id="all-4"></div>
+        </div>
+    </div>
+
+    <div class="main-poker">
+        <div class="putting-poker-group">
+            <div class="putting-row row-1" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-1"></div>
+            <div class="putting-row row-2" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-2"></div>
+            <div class="putting-row row-3" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-3"></div>
+            <div class="putting-row row-4" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-4"></div>
+        </div>
+        <div class="putting-poker-group">
+            <div class="putting-row row-5" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-5"></div>
+            <div class="putting-row row-6" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-6"></div>
+            <div class="putting-row row-7" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-7"></div>
+            <div class="putting-row row-8" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-8"></div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="game.js"></script>
+</body>
+</html>

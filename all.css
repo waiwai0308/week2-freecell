@@ -1,0 +1,323 @@
+body {
+  margin: 0;
+  background-color: #121212;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.top {
+  width: 100%;
+  height: 51px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  line-height: 51px;
+}
+
+.title {
+  color: #00FFCE;
+  font-size: 32px;
+  font-style: italic;
+}
+
+.title span {
+  color: #A617FF;
+}
+
+.top-content {
+  width: 1060px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right;
+}
+
+.top-content .menu {
+  margin-left: auto;
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.top-content .menu div {
+  width: 80px;
+}
+
+.header-poker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1060px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.main-poker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1060px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.putting-poker-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.putting-poker-group:first-child {
+  margin-right: 32px;
+}
+
+.putting-card {
+  margin-top: 24px;
+  width: 112px;
+  height: 173px;
+  border-radius: 5px;
+  margin-right: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.putting-card .poker {
+  position: relative;
+  top: 0;
+}
+
+.putting-row {
+  width: 112px;
+  min-height: 62vh;
+  border-radius: 5px;
+  margin-right: 16px;
+}
+
+.putting-row {
+  position: relative;
+  height: 30px;
+}
+
+.poker {
+  position: absolute;
+  width: 112px;
+  height: 173px;
+  top: 30px;
+}
+
+.d1 {
+  background: url("images/card-diamond-1.svg");
+}
+
+.d2 {
+  background: url("images/card-diamond-2.svg");
+}
+
+.d3 {
+  background: url("images/card-diamond-3.svg");
+}
+
+.d4 {
+  background: url("images/card-diamond-4.svg");
+}
+
+.d5 {
+  background: url("images/card-diamond-5.svg");
+}
+
+.d6 {
+  background: url("images/card-diamond-6.svg");
+}
+
+.d7 {
+  background: url("images/card-diamond-7.svg");
+}
+
+.d8 {
+  background: url("images/card-diamond-8.svg");
+}
+
+.d9 {
+  background: url("images/card-diamond-9.svg");
+}
+
+.d10 {
+  background: url("images/card-diamond-10.svg");
+}
+
+.d11 {
+  background: url("images/card-diamond-11.svg");
+}
+
+.d12 {
+  background: url("images/card-diamond-12.svg");
+}
+
+.d13 {
+  background: url("images/card-diamond-13.svg");
+}
+
+.c1 {
+  background: url("images/card-club-1.svg");
+}
+
+.c2 {
+  background: url("images/card-club-2.svg");
+}
+
+.c3 {
+  background: url("images/card-club-3.svg");
+}
+
+.c4 {
+  background: url("images/card-club-4.svg");
+}
+
+.c5 {
+  background: url("images/card-club-5.svg");
+}
+
+.c6 {
+  background: url("images/card-club-6.svg");
+}
+
+.c7 {
+  background: url("images/card-club-7.svg");
+}
+
+.c8 {
+  background: url("images/card-club-8.svg");
+}
+
+.c9 {
+  background: url("images/card-club-9.svg");
+}
+
+.c10 {
+  background: url("images/card-club-10.svg");
+}
+
+.c11 {
+  background: url("images/card-club-11.svg");
+}
+
+.c12 {
+  background: url("images/card-club-12.svg");
+}
+
+.c13 {
+  background: url("images/card-club-13.svg");
+}
+
+.s1 {
+  background: url("images/card-spade-1.svg");
+}
+
+.s2 {
+  background: url("images/card-spade-2.svg");
+}
+
+.s3 {
+  background: url("images/card-spade-3.svg");
+}
+
+.s4 {
+  background: url("images/card-spade-4.svg");
+}
+
+.s5 {
+  background: url("images/card-spade-5.svg");
+}
+
+.s6 {
+  background: url("images/card-spade-6.svg");
+}
+
+.s7 {
+  background: url("images/card-spade-7.svg");
+}
+
+.s8 {
+  background: url("images/card-spade-8.svg");
+}
+
+.s9 {
+  background: url("images/card-spade-9.svg");
+}
+
+.s10 {
+  background: url("images/card-spade-10.svg");
+}
+
+.s11 {
+  background: url("images/card-spade-11.svg");
+}
+
+.s12 {
+  background: url("images/card-spade-12.svg");
+}
+
+.s13 {
+  background: url("images/card-spade-13.svg");
+}
+
+.h1 {
+  background: url("images/card-heart-1.svg");
+}
+
+.h2 {
+  background: url("images/card-heart-2.svg");
+}
+
+.h3 {
+  background: url("images/card-heart-3.svg");
+}
+
+.h4 {
+  background: url("images/card-heart-4.svg");
+}
+
+.h5 {
+  background: url("images/card-heart-5.svg");
+}
+
+.h6 {
+  background: url("images/card-heart-6.svg");
+}
+
+.h7 {
+  background: url("images/card-heart-7.svg");
+}
+
+.h8 {
+  background: url("images/card-heart-8.svg");
+}
+
+.h9 {
+  background: url("images/card-heart-9.svg");
+}
+
+.h10 {
+  background: url("images/card-heart-10.svg");
+}
+
+.h11 {
+  background: url("images/card-heart-11.svg");
+}
+
+.h12 {
+  background: url("images/card-heart-12.svg");
+}
+
+.h13 {
+  background: url("images/card-heart-13.svg");
+}
+/*# sourceMappingURL=all.css.map */
