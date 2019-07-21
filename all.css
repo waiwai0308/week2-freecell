@@ -92,6 +92,8 @@ body {
 .putting-card .poker {
   position: relative;
   top: 0;
+  -webkit-animation: none;
+          animation: none;
 }
 
 .putting-row {
@@ -111,6 +113,33 @@ body {
   width: 112px;
   height: 173px;
   top: 30px;
+}
+
+.pokerIn {
+  -webkit-animation: test 1.5s ease-out;
+          animation: test 1.5s ease-out;
+}
+
+@-webkit-keyframes test {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 30px;
+  }
+}
+
+@keyframes test {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 30px;
+  }
 }
 
 .d1 {
