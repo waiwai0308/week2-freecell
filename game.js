@@ -233,8 +233,6 @@ function open() {
 
 function updateDrag() {
     $(".putting-row .poker").attr("draggable", false);
-
-    let gameFinished = false;
     for (let x = 1; x <= 8; x++) {
         let all = $(".row-" + x).find(".poker");
         let row1num;
@@ -256,14 +254,9 @@ function updateDrag() {
                     break;
                 }
             }
-            if (all.length == 0) {
-                gameFinished = true;
-            } else {
-                gameFinished = false;
-            }
         }
     }
-    if (gameFinished) {
+    if ($(".main-poker").find(".poker").length == 0) {
         alert("恭喜你 居然可以完整跳過bug來到這裡！")
     }
 }
