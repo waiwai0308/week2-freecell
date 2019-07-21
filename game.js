@@ -267,6 +267,7 @@ $('.undo').click(function() {
     element.remove();
     $("#" + undo[undoLength - 1][0]).append(element);
     undo.splice(-1, 1);
+    updateDrag();
     //alert("移錯的牌就像人生無法從來一樣！");
 })
 $('.restart').click(function() {
