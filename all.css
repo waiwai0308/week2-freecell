@@ -23,7 +23,7 @@ body {
 }
 
 .top-content {
-  width: 1060px;
+  width: 1080px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,7 +50,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 1060px;
+  width: 1080px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -63,7 +63,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 1060px;
+  width: 1080px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -87,6 +87,8 @@ body {
   border-radius: 5px;
   margin-right: 16px;
   background-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .putting-card .poker {
@@ -96,9 +98,64 @@ body {
           animation: none;
 }
 
+.putting-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 24px;
+  width: 114px;
+  height: 173px;
+  border-radius: 5px;
+  margin-right: 16px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFF;
+  background: #000;
+  background-clip: padding-box;
+  border: solid 1px transparent;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.putting-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: 0px;
+  border-radius: inherit;
+  background: -webkit-gradient(linear, left top, right top, from(#00FFCE), to(#A617FF));
+  background: linear-gradient(to right, #00FFCE, #A617FF);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.draggingfocus.putting-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: -webkit-gradient(linear, left top, right top, from(#00FFCE), to(#A617FF));
+  background: linear-gradient(to right, #00FFCE, #A617FF);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
 .putting-row {
-  width: 112px;
-  min-height: 62vh;
+  width: 114px;
+  min-height: calc(100vh - 265px);
   border-radius: 5px;
   margin-right: 16px;
 }
@@ -108,9 +165,13 @@ body {
   height: 30px;
 }
 
+.rowfocus {
+  background-color: red;
+}
+
 .poker {
   position: absolute;
-  width: 112px;
+  width: 114px;
   height: 173px;
   top: 30px;
 }
@@ -143,210 +204,245 @@ body {
 }
 
 .d1 {
-  background: url("images/card-diamond-1.svg");
+  background: url("images/card-diamond-1.svg") no-repeat center;
 }
 
 .d2 {
-  background: url("images/card-diamond-2.svg");
+  background: url("images/card-diamond-2.svg") no-repeat center;
 }
 
 .d3 {
-  background: url("images/card-diamond-3.svg");
+  background: url("images/card-diamond-3.svg") no-repeat center;
 }
 
 .d4 {
-  background: url("images/card-diamond-4.svg");
+  background: url("images/card-diamond-4.svg") no-repeat center;
 }
 
 .d5 {
-  background: url("images/card-diamond-5.svg");
+  background: url("images/card-diamond-5.svg") no-repeat center;
 }
 
 .d6 {
-  background: url("images/card-diamond-6.svg");
+  background: url("images/card-diamond-6.svg") no-repeat center;
 }
 
 .d7 {
-  background: url("images/card-diamond-7.svg");
+  background: url("images/card-diamond-7.svg") no-repeat center;
 }
 
 .d8 {
-  background: url("images/card-diamond-8.svg");
+  background: url("images/card-diamond-8.svg") no-repeat center;
 }
 
 .d9 {
-  background: url("images/card-diamond-9.svg");
+  background: url("images/card-diamond-9.svg") no-repeat center;
 }
 
 .d10 {
-  background: url("images/card-diamond-10.svg");
+  background: url("images/card-diamond-10.svg") no-repeat center;
 }
 
 .d11 {
-  background: url("images/card-diamond-11.svg");
+  background: url("images/card-diamond-11.svg") no-repeat center;
 }
 
 .d12 {
-  background: url("images/card-diamond-12.svg");
+  background: url("images/card-diamond-12.svg") no-repeat center;
 }
 
 .d13 {
-  background: url("images/card-diamond-13.svg");
+  background: url("images/card-diamond-13.svg") no-repeat center;
 }
 
 .c1 {
-  background: url("images/card-club-1.svg");
+  background: url("images/card-club-1.svg") no-repeat center;
 }
 
 .c2 {
-  background: url("images/card-club-2.svg");
+  background: url("images/card-club-2.svg") no-repeat center;
 }
 
 .c3 {
-  background: url("images/card-club-3.svg");
+  background: url("images/card-club-3.svg") no-repeat center;
 }
 
 .c4 {
-  background: url("images/card-club-4.svg");
+  background: url("images/card-club-4.svg") no-repeat center;
 }
 
 .c5 {
-  background: url("images/card-club-5.svg");
+  background: url("images/card-club-5.svg") no-repeat center;
 }
 
 .c6 {
-  background: url("images/card-club-6.svg");
+  background: url("images/card-club-6.svg") no-repeat center;
 }
 
 .c7 {
-  background: url("images/card-club-7.svg");
+  background: url("images/card-club-7.svg") no-repeat center;
 }
 
 .c8 {
-  background: url("images/card-club-8.svg");
+  background: url("images/card-club-8.svg") no-repeat center;
 }
 
 .c9 {
-  background: url("images/card-club-9.svg");
+  background: url("images/card-club-9.svg") no-repeat center;
 }
 
 .c10 {
-  background: url("images/card-club-10.svg");
+  background: url("images/card-club-10.svg") no-repeat center;
 }
 
 .c11 {
-  background: url("images/card-club-11.svg");
+  background: url("images/card-club-11.svg") no-repeat center;
 }
 
 .c12 {
-  background: url("images/card-club-12.svg");
+  background: url("images/card-club-12.svg") no-repeat center;
 }
 
 .c13 {
-  background: url("images/card-club-13.svg");
+  background: url("images/card-club-13.svg") no-repeat center;
 }
 
 .s1 {
-  background: url("images/card-spade-1.svg");
+  background: url("images/card-spade-1.svg") no-repeat center;
 }
 
 .s2 {
-  background: url("images/card-spade-2.svg");
+  background: url("images/card-spade-2.svg") no-repeat center;
 }
 
 .s3 {
-  background: url("images/card-spade-3.svg");
+  background: url("images/card-spade-3.svg") no-repeat center;
 }
 
 .s4 {
-  background: url("images/card-spade-4.svg");
+  background: url("images/card-spade-4.svg") no-repeat center;
 }
 
 .s5 {
-  background: url("images/card-spade-5.svg");
+  background: url("images/card-spade-5.svg") no-repeat center;
 }
 
 .s6 {
-  background: url("images/card-spade-6.svg");
+  background: url("images/card-spade-6.svg") no-repeat center;
 }
 
 .s7 {
-  background: url("images/card-spade-7.svg");
+  background: url("images/card-spade-7.svg") no-repeat center;
 }
 
 .s8 {
-  background: url("images/card-spade-8.svg");
+  background: url("images/card-spade-8.svg") no-repeat center;
 }
 
 .s9 {
-  background: url("images/card-spade-9.svg");
+  background: url("images/card-spade-9.svg") no-repeat center;
 }
 
 .s10 {
-  background: url("images/card-spade-10.svg");
+  background: url("images/card-spade-10.svg") no-repeat center;
 }
 
 .s11 {
-  background: url("images/card-spade-11.svg");
+  background: url("images/card-spade-11.svg") no-repeat center;
 }
 
 .s12 {
-  background: url("images/card-spade-12.svg");
+  background: url("images/card-spade-12.svg") no-repeat center;
 }
 
 .s13 {
-  background: url("images/card-spade-13.svg");
+  background: url("images/card-spade-13.svg") no-repeat center;
 }
 
 .h1 {
-  background: url("images/card-heart-1.svg");
+  background: url("images/card-heart-1.svg") no-repeat center;
 }
 
 .h2 {
-  background: url("images/card-heart-2.svg");
+  background: url("images/card-heart-2.svg") no-repeat center;
 }
 
 .h3 {
-  background: url("images/card-heart-3.svg");
+  background: url("images/card-heart-3.svg") no-repeat center;
 }
 
 .h4 {
-  background: url("images/card-heart-4.svg");
+  background: url("images/card-heart-4.svg") no-repeat center;
 }
 
 .h5 {
-  background: url("images/card-heart-5.svg");
+  background: url("images/card-heart-5.svg") no-repeat center;
 }
 
 .h6 {
-  background: url("images/card-heart-6.svg");
+  background: url("images/card-heart-6.svg") no-repeat center;
 }
 
 .h7 {
-  background: url("images/card-heart-7.svg");
+  background: url("images/card-heart-7.svg") no-repeat center;
 }
 
 .h8 {
-  background: url("images/card-heart-8.svg");
+  background: url("images/card-heart-8.svg") no-repeat center;
 }
 
 .h9 {
-  background: url("images/card-heart-9.svg");
+  background: url("images/card-heart-9.svg") no-repeat center;
 }
 
 .h10 {
-  background: url("images/card-heart-10.svg");
+  background: url("images/card-heart-10.svg") no-repeat center;
 }
 
 .h11 {
-  background: url("images/card-heart-11.svg");
+  background: url("images/card-heart-11.svg") no-repeat center;
 }
 
 .h12 {
-  background: url("images/card-heart-12.svg");
+  background: url("images/card-heart-12.svg") no-repeat center;
 }
 
 .h13 {
-  background: url("images/card-heart-13.svg");
+  background: url("images/card-heart-13.svg") no-repeat center;
+}
+
+.dragging {
+  -webkit-animation: aa .5s infinite;
+          animation: aa .5s infinite;
+}
+
+@-webkit-keyframes aa {
+  0% {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+  50% {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  100% {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+}
+
+@keyframes aa {
+  0% {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+  50% {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  100% {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
 }
 /*# sourceMappingURL=all.css.map */

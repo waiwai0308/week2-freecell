@@ -22,7 +22,7 @@ body {
 }
 
 .top-content {
-    width: 1060px;
+    width: 1080px;
     margin: 0 auto;
     display: flex;
     text-align: right;
@@ -40,7 +40,7 @@ body {
 .header-poker {
     display: flex;
     flex-wrap: wrap;
-    width: 1060px;
+    width: 1080px;
     justify-content: center;
     margin: 0 auto;
 }
@@ -48,7 +48,7 @@ body {
 .main-poker {
     display: flex;
     flex-wrap: wrap;
-    width: 1060px;
+    width: 1080px;
     justify-content: center;
     margin: 0 auto;
 }
@@ -67,6 +67,7 @@ body {
     border-radius: 5px;
     margin-right: 16px;
     background-color: rgba(#FFFFFF,.2);
+    box-sizing: border-box;
     .poker {
         position: relative;
         top: 0;
@@ -74,9 +75,52 @@ body {
     }
 }
 
+.putting-card{
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    width: 114px;
+    height: 173px;
+    border-radius: 5px;
+    margin-right: 16px;
+    position: relative;
+    box-sizing: border-box;
+    color: #FFF;
+    background: #000;
+    background-clip: padding-box;
+    border: solid 1px transparent;
+    transition: all .3s;
+}
+.putting-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0px;
+    border-radius: inherit;
+    background: linear-gradient(to right, #00FFCE, #A617FF);
+    transition: all .3s;
+}
+.draggingfocus.putting-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(to right, #00FFCE, #A617FF);
+    transition: all .3s;
+}
+
 .putting-row {
-    width: 112px;
-    min-height:62vh;
+    width: 114px;
+    min-height:calc(100vh - 265px);
     // border: 1px solid black;
     border-radius: 5px;
     margin-right: 16px;
@@ -93,9 +137,13 @@ body {
     // }
 }
 
+.rowfocus {
+    background-color: red;
+}
+
 .poker {
     position: absolute;
-    width: 112px;
+    width: 114px;
     height: 173px;
     top: 30px;
 }
@@ -117,24 +165,41 @@ body {
 
 @for $i from 1 through 13 {
     .d#{$i} {
-        background: url('images/card-diamond-#{$i}.svg');
+        background: url('images/card-diamond-#{$i}.svg') no-repeat center ;
     }
 }
 
 @for $i from 1 through 13 {
     .c#{$i} {
-        background: url('images/card-club-#{$i}.svg');
+        background: url('images/card-club-#{$i}.svg') no-repeat center ;
     }
 }
 
 @for $i from 1 through 13 {
     .s#{$i} {
-        background: url('images/card-spade-#{$i}.svg');
+        background: url('images/card-spade-#{$i}.svg') no-repeat center ;
     }
 }
 
 @for $i from 1 through 13 {
     .h#{$i} {
-        background: url('images/card-heart-#{$i}.svg');
+        background: url('images/card-heart-#{$i}.svg') no-repeat center ;
     }
 }
+
+.dragging {
+    animation: aa .5s infinite;
+}
+
+@keyframes aa {
+    0% {
+        filter:invert(0);
+    }
+    50% {
+        filter:invert(1);
+    }
+    100% {
+        filter:invert(0);
+    }
+}
+

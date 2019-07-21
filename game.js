@@ -5,15 +5,39 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
+function dropentercard(ev, num) {
+    // ev.target.classList
+    $('.row-' +  num).addClass("rowfocus");
+}
+function dropleavecard(ev, num) {
+    $('.row-' +  num).removeClass("rowfocus");
+}
+
+function dropenter(ev) {
+    ev.target.classList.add("draggingfocus");
+}
+
+function dropleave(ev) {
+    ev.target.classList.remove("draggingfocus");
+}
+
 function drag(ev) {
+    if(ev.target.className.indexOf("dragging")== -1) {
+        ev.target.classList.add("dragging");
+    }
+
     fromElement = $("#" + ev.target.id).parent().attr("id");
     ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragend(ev) {
+    ev.target.classList.remove("dragging");
 }
 
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-
+    document.getElementById(data).classList.remove("dragging");
     if (ev.target.className.indexOf("poker") > -1 || ev.target.className.indexOf("putting-") > -1) {
         if (ev.target.className.indexOf("poker") > -1 && ev.target.firstChild !== null) {
             return;
@@ -79,6 +103,7 @@ function drop(ev) {
 
 function dropCollect(ev) {
     ev.preventDefault();
+    ev.target.classList.remove("draggingfocus");
     var data = ev.dataTransfer.getData("text");
     let cardItem = document.getElementById(data);
     if (document.getElementById(data).childElementCount > 0) return;
@@ -101,6 +126,7 @@ function dropCollect(ev) {
 // 暫存卡牌區
 function dropPutting(ev) {
     ev.preventDefault();
+    ev.target.classList.remove("draggingfocus");
     var data = ev.dataTransfer.getData("text");
     if (document.getElementById(data).childElementCount > 0) return;
     if (ev.path[0].className.indexOf("poker") === -1) {
@@ -184,7 +210,7 @@ function open() {
                 } else {
                     colorType = false;
                 }
-                let element = `<div draggable="true" class="pokerIn poker ${row[x][i]}" ondragstart="drag(event)"  id="${row[x][i]}" data-num="${num}"  data-color="${colorType}"></div>`
+                let element = `<div draggable="true" class="pokerIn poker ${row[x][i]}" ondragstart="drag(event)" ondragend="dragend(event)"  id="${row[x][i]}" data-num="${num}"  data-color="${colorType}"></div>`
                 $(`.row-${x + 1}`).append(element);
             } else {
                 let num = row[x][i].slice(1);
@@ -195,7 +221,7 @@ function open() {
                 } else {
                     colorType = false;
                 }
-                let element = `<div draggable="true" class="pokerIn poker ${row[x][i]}" ondragstart="drag(event)" id="${row[x][i]}" data-num="${num}" data-color="${colorType}"></div>`
+                let element = `<div draggable="true" class="pokerIn poker ${row[x][i]}" ondragstart="drag(event)" ondragend="dragend(event)"  id="${row[x][i]}" data-num="${num}" data-color="${colorType}"></div>`
                 $(`.${row[x][i - 1]}`).append(element);
             }
         }
@@ -240,7 +266,6 @@ function updateDrag() {
     if (gameFinished) {
         alert("恭喜你 居然可以完整跳過bug來到這裡！")
     }
-
 }
 $('.undo').click(function() {
     if (undo.length == 0) return;

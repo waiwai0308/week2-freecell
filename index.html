@@ -12,7 +12,7 @@
     <div class="top">
         <div class="top-content">
             <div class="title">FREE<span>CELL</span></div>
-            <span>左邊是暫時置放區（第一版先試水溫抓感覺，第二版有時間在重構）</span>
+            <span>左邊是暫時置放區，請拖曳至牌列最後一張卡牌才能堆疊（第一版先試水溫抓感覺，第二版有時間在重構）</span>
             <div class="menu">
                 <div class="undo">Undo</div>
                 <div class="restart">Restart</div>
@@ -21,25 +21,25 @@
     </div>
     <div class="header-poker">
         <div class="putting-poker-group">
-            <div class="putting-card" ondrop="dropPutting(event)" ondragover="allowDrop(event)" id="putting-1"></div>
-            <div class="putting-card" ondrop="dropPutting(event)" ondragover="allowDrop(event)" id="putting-2"></div>
-            <div class="putting-card" ondrop="dropPutting(event)" ondragover="allowDrop(event)" id="putting-3"></div>
-            <div class="putting-card" ondrop="dropPutting(event)" ondragover="allowDrop(event)" id="putting-4"></div>
+            <div class="putting-card" ondrop="dropPutting(event)" ondragenter="dropenter(event)" ondragleave="dropleave(event)" ondragover="allowDrop(event)" id="putting-1"></div>
+            <div class="putting-card" ondrop="dropPutting(event)" ondragenter="dropenter(event)" ondragleave="dropleave(event)" ondragover="allowDrop(event)" id="putting-2"></div>
+            <div class="putting-card" ondrop="dropPutting(event)" ondragenter="dropenter(event)" ondragleave="dropleave(event)" ondragover="allowDrop(event)" id="putting-3"></div>
+            <div class="putting-card" ondrop="dropPutting(event)" ondragenter="dropenter(event)" ondragleave="dropleave(event)" ondragover="allowDrop(event)" id="putting-4"></div>
         </div>
         <div class="putting-poker-group">
-            <div class="putting-card" ondrop="dropCollect(event)" ondragover="allowDrop(event)" id="all-1"></div>
-            <div class="putting-card" ondrop="dropCollect(event)" ondragover="allowDrop(event)" id="all-2"></div>
-            <div class="putting-card" ondrop="dropCollect(event)" ondragover="allowDrop(event)" id="all-3"></div>
-            <div class="putting-card" ondrop="dropCollect(event)" ondragover="allowDrop(event)" id="all-4"></div>
+            <div class="putting-card" ondrop="dropCollect(event)" ondragenter="dropenter(event)" ondragleave="dropleave(event)" ondragover="allowDrop(event)" id="all-1"></div>
+            <div class="putting-card" ondrop="dropCollect(event)" ondragenter="dropenter(event)" ondragleave="dropleave(event)" ondragover="allowDrop(event)" id="all-2"></div>
+            <div class="putting-card" ondrop="dropCollect(event)" ondragenter="dropenter(event)" ondragleave="dropleave(event)" ondragover="allowDrop(event)" id="all-3"></div>
+            <div class="putting-card" ondrop="dropCollect(event)" ondragenter="dropenter(event)" ondragleave="dropleave(event)" ondragover="allowDrop(event)" id="all-4"></div>
         </div>
     </div>
 
     <div class="main-poker">
         <div class="putting-poker-group">
-            <div class="putting-row row-1" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-1"></div>
-            <div class="putting-row row-2" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-2"></div>
-            <div class="putting-row row-3" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-3"></div>
-            <div class="putting-row row-4" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-4"></div>
+            <div class="putting-row row-1" ondrop="drop(event)"  ondragover="allowDrop(event)" id="row-1"></div>
+            <div class="putting-row row-2" ondrop="drop(event)"  ondragover="allowDrop(event)" id="row-2"></div>
+            <div class="putting-row row-3" ondrop="drop(event)"  ondragover="allowDrop(event)" id="row-3"></div>
+            <div class="putting-row row-4" ondrop="drop(event)"  ondragover="allowDrop(event)" id="row-4"></div>
         </div>
         <div class="putting-poker-group">
             <div class="putting-row row-5" ondrop="drop(event)" ondragover="allowDrop(event)" id="row-5"></div>
